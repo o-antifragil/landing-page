@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&family=Public+Sans:wght@100..900&display=swap');
+
+/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Public Sans', sans-serif;
+    color: #000;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ----------------------- HEADER -------------------------- */
+
+/* Cabeçalho */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 10%;
+    max-width: 1170px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.logo .imagem {
+    width: 100px;
+}
+
+.logo .titulo {
+    margin-left: 7px;
+    font-size: 17px;
+    transition: color 0.3s ease-in-out;
+}
+
+.cabecalho .titulo:hover {
+    color: #1ED760;
+}
+
+.navegacao .menu {
+    display: flex;
+}
+
+.navegacao .menu .item {
+    margin: 10px;
+}
+
+.navegacao .menu .item a {
+    padding: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navegacao .menu .item a:hover {
+    background-color: #1ED760;
+    color: white;
+}
+
+/* ----------------------- MAIN -------------------------- */
+
+/* PAINEL */
+.conteudo-principal .paineis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    position: relative;
+}
+
+.conteudo-principal .paineis .imagem-painel {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(70%);
+
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.conteudo-principal .paineis .projeto1 {
+    background-image: url('../imagens/painel1.jpg');
+}
+
+.conteudo-principal .paineis .projeto2 {
+    background-image: url('../imagens/painel2.jpg');
+}
+
+.conteudo-principal .paineis .projeto3 {
+    background-image: url('../imagens/painel3.jpg');
+}
+
+.conteudo-principal .paineis .imagem-painel.mostrar {
+    opacity: 1;
+}
+
+.conteudo-principal .paineis .titulo {
+    color: white;
+    text-transform: uppercase;
+    font-size: calc(1em + 1vw);
+}
+
+.conteudo-principal .paineis .seta {
+    background: url('../imagens/seta.png') no-repeat center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    text-indent: 100%;
+    overflow: hidden;
+}
+
+.conteudo-principal .paineis .seta.btn-voltar {
+    left: 20px;
+    transform: rotateY(180deg);
+}
+
+.conteudo-principal .paineis .seta.btn-avancar {
+    right: 20px;
+}
+
+/* QUEM SOMOS */
+.quem-somos {
+    background-color: #2941ab;
+    padding: 50px 10%;
+}
+
+.quem-somos .conteudo {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.quem-somos .informacoes {
+    flex: 1;
+}
+
+.quem-somos .informacoes .titulo {
+    font-size: 50px;
+    color: #1ED760;
+    margin-bottom: 20px;
+}
+
+.quem-somos .informacoes .texto {
+    font-size: 20px;
+    line-height: 1.5;
+    color: white;
+    font-weight: 400;
+}
+
+.quem-somos .imagem {
+    flex: 1;
+    max-width: 400px;
+}
+
+/* ----------------------- FOOTER -------------------------- */
+
+/* Rodapé */
+.rodape {
+    padding: 40px 10% 20px;
+    background-color: white;
+}
+
+.rodape .navegacao {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.rodape .logo .imagem {
+    width: 50px;
+}
+
+.rodape .redes-sociais {
+    display: flex;
+    gap: 10px;
+}
+
+.rodape .redes-sociais a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border: 2px solid #111;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.rodape .redes-sociais a:hover {
+    background-color: #1ED760;
+    color: white;
+}
+
+.rodape .copyright {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
